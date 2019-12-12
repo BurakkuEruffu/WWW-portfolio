@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+ 
+ <head>
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
+
+			<link rel="stylesheet" type="text/css" href="ColorStyles.css">
+			
+
+
+  </head>
+  <script>
+function openModal() {
+  document.getElementById('myModal').style.display = "block";
+}
+function closeModal() {
+  document.getElementById('myModal').style.display = "none";
+}
+var slideIndex = 1;
+showSlides(slideIndex);
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  var captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
+</script>
+  
+ <body> 
+ <style>
+ body
+ {
+ background-image: url("sand.jpg");
+ }
+ </style>
+ <header>
+<!-- introduction-->
+<h1>Portfolio</h1>
+<h2>Konsta Kantoluoto</h2>
+
+
+</header>
+<hr/>
+<section>
+
+<!-- Navigation bar -->
+<div>
+<table border="2" cellpadding="20" style="background-color: #5d525e">
+<navbar>
+<tr><td><a href="index.html">Home</a></td></tr>
+<tr><td><a href="bio.html">Bio</a></td></br></tr>
+<td><a href="contact.html">Contact</a></td>
+</navbar>
+</table>
+</div>
+<h2 style="text-align:center">Portfolio works</h2>
+<div class="row">
+  <div class="column">
+    <img src="images/Belle.png" style="width:100%" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
+  </div>
+  <div class="column">
+    <img src="images/Carulus.png" style="width:100%" onclick="openModal();currentSlide(2)" class="hover-shadow cursor">
+  </div>
+  <div class="column">
+    <img src="images/Cecilia.png" style="width:100%" onclick="openModal();currentSlide(3)" class="hover-shadow cursor">
+  </div>
+  <div class="column">
+    <img src="images/Elven_sorcerer.png" style="width:100%" onclick="openModal();currentSlide(4)" class="hover-shadow cursor">
+  </div>
+  <div class="column">
+    <img src="images/Quartermaster.png" style="width:100%" onclick="openModal();currentSlide(5)" class="hover-shadow cursor">
+  </div>
+   <div class="column">
+    <img src="images/Tavern keeper.png" style="width:100%" onclick="openModal();currentSlide(6)" class="hover-shadow cursor">
+  </div>
+</div>
+<div id="myModal" class="modal">
+  <span class="close cursor" onclick="closeModal()">&times;</span>
+  <div class="modal-content">
+    <div class="mySlides">
+      <div class="numbertext">1 / 6</div>
+      <img src="images/Belle.png" style="width:100%">
+    </div>
+    <div class="mySlides">
+      <div class="numbertext">2 / 6</div>
+      <img src="images/Carulus.png" style="width:100%">
+    </div>
+    <div class="mySlides">
+      <div class="numbertext">3 / 6</div>
+      <img src="images/Cecilia.png" style="width:100%">
+    </div>
+    <div class="mySlides">
+      <div class="numbertext">4 / 6</div>
+      <img src="images/Elven_sorcerer.png" style="width:100%">
+    </div>
+	<div class="mySlides">
+      <div class="numbertext">5 / 6</div>
+      <img src="images/Quartermaster.png" style="width:100%">
+    </div>
+	<div class="mySlides">
+      <div class="numbertext">6 / 6</div>
+      <img src="images/Tavern keeper.png" style="width:100%">
+    </div>
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    <div class="caption-container">
+      <p id="caption"></p>
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="images/Belle.png" style="width:90%" onclick="currentSlide(1)" alt="Belle, Tavernia">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="images/Carulus.png" style="width:90%" onclick="currentSlide(2)" alt="Carulus, Tavernia">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="images/Cecilia.png" style="width:90%" onclick="currentSlide(3)" alt="Cecilia, Tavernia">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="images/Elven_sorcerer.png" style="width:90%" onclick="currentSlide(4)" alt="Elven sorcerer, Tavernia">
+    </div>
+	<div class="column">
+      <img class="demo cursor" src="images/Quartermaster.png" style="width:90%" onclick="currentSlide(5)" alt="Quartermaster, Tavernia">
+    </div>
+	<div class="column">
+      <img class="demo cursor" src="images/Tavern keeper.png" style="width:90%" onclick="currentSlide(6)" alt="Tavern keeper, Tavernia">
+    </div>
+  </div>
+</div>
+</div>
+</section>
+
+<footer>
+<h3>2019©</h3>
+</footer>
+</body>
+</html>
